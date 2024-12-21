@@ -1,0 +1,147 @@
+/*<===== Common-CSS start =====>*/
+*{
+    margin: 0; padding: 0;
+    outline: 0; box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol,span{margin: 0; padding: 0;}
+a{text-decoration: none; color: #000;}
+ul{list-style-type: none;}
+:root{
+	--common-font: "Josefin Sans", sans-serif;
+	--common-color: #ff6f61;
+	--top-header: #151A32;
+}
+body{
+	user-select: none;
+	-webkit-user-select: none; -moz-user-select: none; -o-user-select: none;
+	font-family: var(--common-font);
+}
+::-webkit-scrollbar{display: none;}
+
+/*<===== Home_Page start =====>*/
+#navbar{
+     display: flex; width: 100%; height: 80px;
+     align-items: center; justify-content: space-between;
+     transition: 0.7s linear;
+     z-index: 9999;
+     background-color: aqua;
+}
+.shadow{box-shadow: inset 0px 15px 35px 10px rgba(0,0,0,0.1),inset 0px -100px 30px -95px rgba(0,0,0,0.1) !important;}
+.navbarr{
+     display: flex;
+     align-items: center; justify-content: space-between;
+}
+.nav-menu li{
+     display: flex; height: 100%;
+     padding: 8px 14px 8px 14px; margin: 3px;
+     font-size: 18px; letter-spacing: 0.7px;
+     align-items: center; border-radius: 9px;
+}
+.nav-menu li:hover{box-shadow: rgba(0, 0, 0, 0.325) 0px 2px 4px 0px inset;}
+.nav-menu li:hover a{color: #ff6f61;}
+
+.nav-menu .dropdown{
+     position: absolute; width: 200px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; backdrop-filter: blur(20px);
+     transform: translateY(60px); transition: all 0.8s ease;
+     border-radius: 15px;
+     visibility: hidden; opacity: 0; z-index: 9;
+}
+.dropdown li:hover{box-shadow: rgba(31, 31, 148, 0.7) 0px 30px 60px -10px inset, rgba(255, 255, 255, 0.4) 0px 18px 36px -20px inset;}
+.dropdown li:hover a{color: #fff;}
+.nav-menu div:hover .dropdown{
+     transform: translateY(0);
+     visibility: visible; opacity: 1;
+}
+.nav-menu .dropdown :first-child{border-radius: 15px 15px 9px 9px;}
+.nav-menu .dropdown :last-child{border-radius: 9px 9px 15px 15px;}
+
+.navbar-function{position: relative; margin: 8px;}
+.navbar-function ul li span{
+    position: absolute;
+    top: 3px; right: 3px;
+    height: 13px; width: 14px;
+    font-size: 11px; color: #fff;
+    border-radius: 50%;
+    display: flex; justify-content: center;
+    background-color: var(--common-color);
+}
+.navbar-function ul li button{
+	padding: 3.5px 8px; margin: 1px;
+	border-radius: 50%; border: none;
+	background-color: inherit;
+	transition: all 0.2s linear;
+}
+.navbar-function ul li:hover button{box-shadow: rgba(0, 0, 0, 0.325) 0px 2px 4px 0px;}
+
+.nav-btn{
+     transform: translateX(50px);
+	cursor: pointer;
+     visibility: hidden; display: none;
+     background-color: aqua;
+}
+.line1, .line2, .line3{
+	width: 30px; height: 5px; margin: 5px;
+	background-color: #000;
+	border-radius: 10px;
+	transition: all 0.1s ease;
+}
+.active .line1{transform: translate(0px , 10px)rotate(45deg);}
+.active .line2{opacity: 0;}
+.active .line3{transform: translate(0px , -10px)rotate(-45deg);}
+
+/*<===== Offer Layer Start =====>*/
+.offerLayer-r .offerLayer{
+     width: 100%; height: 600px;
+     border-radius: 30px;
+     background: no-repeat center; background-size: cover;
+}
+.offerLayerCnt{
+     display: flex; flex-direction: column;
+     height: 100%; width: 35%; justify-content: center;
+     transform: translateX(50px);
+}
+.offerLayerCnt h3{font-size: 16px;}
+.offerLayerCnt h2{font-size: 50px; font-weight: 700; margin: 10px 0 15px 0;}
+.offerLayerCnt p{margin-bottom: 30px; font-weight: 600;}
+.offerLayerCnt button{
+     height: 50px; width: 150px;
+     border: #000 1px solid; border-radius: 10px;
+     background-color: transparent;
+     font-weight: 500;
+     transition: all 1s ease;
+}
+.offerLayerCnt button:hover{background-color: #ff6f61; border: none;}
+.offerLayerCnt button:hover a{color: #fff;}
+
+.offerLayer-R{
+     opacity: 0; visibility: hidden;
+}
+/*<===== Home_Page End =====>*/
+
+
+/*<===== Media_Queres =====>*/
+@media (max-width:1200px) {
+     .offerLayerCnt{width: 40%;} .offerLayerCnt h2{font-size: 47px;}
+     .offerLayer-r .offerLayer{border-radius: 15px;}
+}
+@media (max-width:1085px) {
+     .nav-menu, .navbar-function{visibility: hidden;}
+     .nav-btn{visibility: visible; display: block; transform: translateX(-70px);}
+}
+@media (max-width:925px) {.offerLayerCnt{width: 50%;} .offerLayerCnt h2{font-size: 43px;}}
+@media (max-width:768px) {
+     #navbar{box-shadow: -15px 15px 25px -10px rgba(0,0,0,0.1) !important;}
+}
+@media (max-width:767px) {
+     .offerLayer-r{opacity: 0; visibility: hidden;}
+     .offerLayer-R{opacity: 1; visibility: visible;}
+}
+@media (max-width:425px) {
+     #navbar img{
+          position: absolute; top: 15px; left: 10px;
+          width: 120px;
+     }
+     #navbar .nav-btn{position: absolute; top: 0; right: -85px;}
+     .line1, .line2, .line3{width: 28px; height: 4.5px;}
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./Assets/Images/Browser_Logo.svg">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Aytor</title>
+<!-- Google_Font -->
+    <link rel="stylesheet" href="./Assets/Styles/css2.css">
+<!-- Font_Awesome -->
+    <link rel="stylesheet" href="./Assets/Styles/All_Font.min.css">
+<!-- Slick_Slider -->
+    <link rel="stylesheet" href="./Assets/Styles/slick.min.css">
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="./Assets/Styles/bootstrap.min.css">
+<!-- Custom_CSS -->
+    <link rel="stylesheet" href="./Assets/Styles/style.css">
+<!-- Responsive_CSS -->
+    <link rel="stylesheet" href="./Assets/Styles/responsive.css">
+</head>
+<body>
+    <nav id="navbar" class="shadow d-flex">
+        <div class="ms-5">
+            <a href="Index.html"><img src="./Assets/Images/Navbar_Logo.svg" alt=""></a>
+        </div>
+        <div>
+            <ul class="nav-menu d-flex">
+                <li><a href="#">Home</a></li>
+                <div>
+                    <li class="nav-item">
+                        <a href="#">
+                            Shop
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </a>
+                    </li>
+                    <ul class="dropdown">
+                        <li><a href="#" target="_blank">Gird</a></li>
+                        <li><a href="#" target="_blank">Details Style One</a></li>
+                        <li><a href="#" target="_blank">Compare</a></li>
+                        <li><a href="#" target="_blank">Cart</a></li>
+                        <li><a href="#" target="_blank">Checkout</a></li>
+                        <li><a href="#" target="_blank">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="nav-item">
+                        <a href="#">
+                            Pages
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </a>
+                    </li>
+                    <ul class="dropdown">
+                        <li><a href="#" target="_blank">About Us</a></li>
+                        <li><a href="#" target="_blank">Our Websites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="nav-item">
+                        <a href="#">
+                            Features
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </a>
+                    </li>
+                    <ul class="dropdown">
+                        <li><a href="#">New Arrival Products</a></li>
+                        <li><a href="#">Best Seller Products</a></li>
+                        <li><a href="#">Deal of the Days</a></li>
+                        <li><a href="#">Latest News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="nav-item">
+                        <a href="#">
+                            Blog
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </a>
+                    </li>
+                    <ul class="dropdown">
+                        <li><a href="#" target="_blank">Classic</a></li>
+                        <li><a href="#" target="_blank">Classic With Sidebar</a></li>
+                        <li><a href="#" target="_blank">Details</a></li>
+                    </ul>
+                </div>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-function d-none d-lg-block m-5">
+            <ul class="d-flex">
+                <li>
+                  <button class="searchbox-open-icon">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass" onclick="toggleOverflow()"></i></a>
+                  </button>
+                </li>
+                <li>
+                  <button><a href="#"><i class="fa-regular fa-user"></i></a></button>
+                </li>
+                <li>
+                  <button><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                </li>
+                <li>
+                  <button><a href="#"><i class="fa-solid fa-bag-shopping bag"></i></a></button>
+                  <span>0</span>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-btn">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <nav id="offerLayer">
+        <div class="offerLayer-r">
+            <div class="offerLayer container-lg" style="background-image: url(./Assets/Images/Offer-Layer/Offer_layer-Img1.svg);">
+                <div class="offerLayerCnt">
+                    <h3>Mega Sale</h3>
+                    <h2>Up To 35% Off</h2>
+                    <p>Objectively incubate enabled innovation through leveraged mindshare Competently.</p>
+                    <button><a href="#">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a></button>
+                </div>
+            </div>
+            <!-- <div class="offerLayer container-lg" style="background-image: url(./Assets/Images/Offer-Layer/Offer_layer-Img2.svg);">
+                <div class="offerLayerCnt">
+                    <h3>Mega Sale</h3>
+                    <h2>Up To 35% Off</h2>
+                    <p>Objectively incubate enabled innovation through leveraged mindshare Competently.</p>
+                    <button><a href="#">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a></button>
+                </div>
+            </div>
+            <div class="offerLayer container-lg" style="background-image: url(./Assets/Images/Offer-Layer/Offer_layer-Img3.svg);">
+                <div class="offerLayerCnt">
+                    <h3>Mega Sale</h3>
+                    <h2>Up To 35% Off</h2>
+                    <p>Objectively incubate enabled innovation through leveraged mindshare Competently.</p>
+                    <button><a href="#">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a></button>
+                </div>
+            </div> -->
+        </div>
+        <div class="offerLayer-R">
+
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jquery -->
+    <script src="./Assets/Scripts/Jquery_3.7.1.min.js"></script>
+<!-- Font_Awesome -->
+    <script src="./Assets/Scripts/All_Font.min.js"></script>
+<!-- Slick_Slider -->
+    <script src="./Assets/Scripts/slick.min.js"></script>
+<!-- Bootstrap -->
+    <script src="./Assets/Scripts/Bootstrap.bundle.min.js"></script>
+<!-- Custom_Script -->
+    <script src="./Assets/Scripts/script.js"></script>
+</body>
+</html>
